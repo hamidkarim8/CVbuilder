@@ -15,39 +15,48 @@ $html = '
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         .container {
             width: 100%;
             margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
         }
         .header {
+            background-color: #2e7db8;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
         }
         .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
+            letter-spacing: 1.5px;
         }
         .header h2 {
             margin: 5px 0;
             font-size: 18px;
-            color: #555;
+            font-weight: normal;
         }
         .contact-info {
             text-align: center;
             margin-bottom: 20px;
         }
         .contact-info p {
-            margin: 5px 0;
+            margin: 3px 0;
+            color: #555;
         }
         .section-title {
-            background-color: #2e7db8;
+            background-color: #00a651;
             color: #fff;
-            padding: 5px;
-            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
         }
         .content-section {
-            width: 100%;
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
@@ -61,9 +70,16 @@ $html = '
         }
         table td {
             padding: 5px;
-            border-bottom: 1px solid #ccc;
+            color: #333;
+            font-size: 14px;
+            vertical-align: top;
         }
-        .blue {
+        table .label {
+            font-weight: bold;
+            color: #555;
+            width: 40%;
+        }
+        table .blue {
             color: #2e7db8;
         }
     </style>
@@ -73,7 +89,7 @@ $html = '
     <div class="container">
         <!-- Header Section -->
         <div class="header">
-            <h1>MOHD SUFIAN BIN MOHD TARIMIZI</h1>
+            <h1>MOHD SUFIAN BIN MOHD TARMIZI</h1>
             <h2>PEGAWAI TEKNOLOGI MAKLUMAT</h2>
         </div>
         
@@ -89,51 +105,51 @@ $html = '
             <div class="content-left">
                 <table>
                     <tr>
-                        <td>No. Kad Pengenalan</td>
+                        <td class="label">No. Kad Pengenalan</td>
                         <td class="blue">801011-10-1234</td>
                     </tr>
                     <tr>
-                        <td>No. Kad Pengenalan Lama</td>
+                        <td class="label">No. Kad Pengenalan Lama</td>
                         <td class="blue">-</td>
                     </tr>
                     <tr>
-                        <td>Tarikh Lahir</td>
+                        <td class="label">Tarikh Lahir</td>
                         <td class="blue">11/10/1988</td>
                     </tr>
                     <tr>
-                        <td>Tempat Lahir</td>
+                        <td class="label">Tempat Lahir</td>
                         <td class="blue">Hospital Kajang</td>
                     </tr>
                     <tr>
-                        <td>Jantina</td>
+                        <td class="label">Jantina</td>
                         <td class="blue">Lelaki</td>
                     </tr>
                     <tr>
-                        <td>Bangsa</td>
+                        <td class="label">Bangsa</td>
                         <td class="blue">Melayu</td>
                     </tr>
                     <tr>
-                        <td>Agama</td>
+                        <td class="label">Agama</td>
                         <td class="blue">Islam</td>
                     </tr>
                     <tr>
-                        <td>Jenis Darah</td>
+                        <td class="label">Jenis Darah</td>
                         <td class="blue">AB+</td>
                     </tr>
                     <tr>
-                        <td>Telefon Bimbit</td>
+                        <td class="label">Telefon Bimbit</td>
                         <td class="blue">013-1234213</td>
                     </tr>
                     <tr>
-                        <td>Lesen Memandu</td>
+                        <td class="label">Lesen Memandu</td>
                         <td class="blue">B, D</td>
                     </tr>
                     <tr>
-                        <td>Alamat Tetap</td>
+                        <td class="label">Alamat Tetap</td>
                         <td class="blue">8 5 Jln Pju 8/5G Bandar Damansara Perdana Petaling Jaya</td>
                     </tr>
                     <tr>
-                        <td>Poskod</td>
+                        <td class="label">Poskod</td>
                         <td class="blue">47820</td>
                     </tr>
                 </table>
@@ -141,11 +157,11 @@ $html = '
             <div class="content-right">
                 <table>
                     <tr>
-                        <td>Alamat Surat Menyurat</td>
+                        <td class="label">Alamat Surat Menyurat</td>
                         <td class="blue">No. 225 Jalan 18/23, Taman Sri Serdang, Seri Kembangan</td>
                     </tr>
                     <tr>
-                        <td>Poskod</td>
+                        <td class="label">Poskod</td>
                         <td class="blue">43300</td>
                     </tr>
                 </table>
@@ -158,15 +174,15 @@ $html = '
             <div class="content-left">
                 <table>
                     <tr>
-                        <td>Taraf Perkahwinan</td>
+                        <td class="label">Taraf Perkahwinan</td>
                         <td class="blue">Berkahwin</td>
                     </tr>
                     <tr>
-                        <td>Nama Pasangan</td>
+                        <td class="label">Nama Pasangan</td>
                         <td class="blue">Maisarah bte Zainab</td>
                     </tr>
                     <tr>
-                        <td>Tarikh Lahir Pasangan</td>
+                        <td class="label">Tarikh Lahir Pasangan</td>
                         <td class="blue">11/11/1986</td>
                     </tr>
                 </table>
@@ -174,15 +190,15 @@ $html = '
             <div class="content-right">
                 <table>
                     <tr>
-                        <td>Anak</td>
+                        <td class="label">Anak</td>
                         <td class="blue">Ramlah binti Mohd Sufian</td>
                     </tr>
                     <tr>
-                        <td>Tarikh Lahir Anak</td>
+                        <td class="label">Tarikh Lahir Anak</td>
                         <td class="blue">12/09/2010</td>
                     </tr>
                     <tr>
-                        <td>Keputusan Peperiksaan</td>
+                        <td class="label">Keputusan Peperiksaan</td>
                         <td class="blue">UPSR: 4A 1B</td>
                     </tr>
                 </table>
@@ -204,3 +220,4 @@ $dompdf->render();
 
 // Output the PDF to browser
 $dompdf->stream("profile.pdf", ["Attachment" => false]);
+
