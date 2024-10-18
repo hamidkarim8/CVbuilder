@@ -10,7 +10,7 @@ $data=file_get_contents('index.html');
 
 $options = new Options();
 $options->set('isRemoteEnabled', true);
-
+$options->set('isHtml5ParserEnabled', true); // Enable HTML5 support
 $dompdf = new Dompdf($options);
 
 $dompdf->loadHTML($data);

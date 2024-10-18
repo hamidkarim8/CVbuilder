@@ -5,167 +5,176 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <style>
-    body {
-      background-color: #ccc;
-      width: 21cm;
-      height: 29.7cm;
-      margin: 0 auto;
-      font-family: "source_sans_proregular", sans-serif;
-    }
+        body {
+            background-color: #ccc;
+            margin: 0 auto;
+            font-family: "source_sans_proregular", sans-serif;
+        }
 
-    @font-face {
-      font-family: "source_sans_proregular";
-      src: local("Source Sans Pro"), url("fonts/sourcesans/sourcesanspro-regular-webfont.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }
+        @font-face {
+            font-family: "source_sans_proregular";
+            src: local("Source Sans Pro"), url("fonts/sourcesans/sourcesanspro-regular-webfont.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    page {
-      background-image: url('http://localhost:8089/PDFtemplate/bg-pdf.jpeg');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 0.5cm;
-      position: relative;
-    }
+        page {
+            background-image: url('http://localhost:8089/PDFtemplate/bg-pdf.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            position: relative;
+        }
 
-    page[size="A4"] {
-      width: 21cm;
-      height: 29.7cm;
-    }
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
 
-    .parent {
-      margin: 0 0.5cm;
-      height: 5cm;
-      width: 20cm;
-      border-collapse: collapse;
-    }
+        .parent {
+            margin: 0 0.5cm;
+            height: 5cm;
+            width: 20cm;
+            border-collapse: collapse;
+        }
 
-    .header td,
-    .contact td,
-    .photo td {
-      padding: 0.3cm;
-    }
+        .header td,
+        .contact td,
+        .photo td {
+            padding: 0.3cm;
+        }
 
-    .photo {
-      width: 5cm;
-    }
+        .photo {
+            width: 5cm;
+        }
 
-    .photo img {
-      max-width: 100%;
-      height: auto;
-    }
+        .photo img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .content-1{
-      margin-top: 3.8cm;
-    }
+        .content-1 {
+            margin-top: 3cm;
+        }
 
-    .content-1,
-    .content-2 {
-      display: table;
-      margin-left: 0.9cm;
-    }
+        .avoid-break {
+            page-break-after: avoid;
+            page-break-before: avoid;
+        }
 
-    .content-1>tr>td {
-      padding: 0 0.5cm;
-    }
+        .content-1,
+        .content-2 {
+            display: table;
+            margin-left: 0.9cm;
+        }
 
-    table.content-1>tbody>tr>td>h2 {
-      color: rgb(46, 46, 255);
-    }
+        .content-1>tr>td {
+            padding: 0 0.2cm;
+        }
 
-    table.content-1>tbody>tr:nth-child(1)>td:nth-child(1),
-    table.content-2>tbody>tr:nth-child(1)>td {
-      width: 7.7cm;
-    }
+        table.content-1>tbody>tr>td>h2 {
+            color: rgb(46, 46, 255);
+            margin: 0.1cm 0;
+        }
 
-    table.content-2>tbody>tr:nth-child(1)>td:nth-child(2) {
-      width: 9cm;
-    }
+        table.content-1>tbody>tr:nth-child(1)>td:nth-child(1),
+        table.content-2>tbody>tr:nth-child(1)>td {
+            width: 7.7cm;
+        }
 
-    .item {
-      padding-left: 1rem;
-    }
+        table.content-2>tbody>tr:nth-child(1)>td:nth-child(2) {
+            width: 9cm;
+        }
 
-    .bullet {
-      margin-left: -1rem;
-    }
+        .item {
+            padding-left: 0.8rem;
+        }
 
-    .bullet:before {
-      content: "\25C6 ";
-      color: #019fce;
-    }
+        .bullet {
+            margin-left: -0.8rem;
+        }
 
-    p {
-      margin-block: 0;
-    }
+        .bullet:before {
+            content: "\25C6 ";
+            color: #019fce;
+            font-family: 'Arial Unicode MS', Arial, sans-serif;
+        }
 
-    .photo>img {
-      width: 5cm;
-      height: 5cm;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+        p {
+            margin-block: 0.1cm;
+            font-size: 8pt;
+        }
 
-    .w-100 {
-      width: 100%;
-    }
+        small {
+            font-size: 8pt;
+            color: #555;
+            font-weight: 300;
+        }
 
-    .line {
-      border-top: 1px solid gray;
-    }
+        .photo>img {
+            width: 5cm;
+            height: 5cm;
+            object-fit: cover;
+            border-radius: 50%;
+        }
 
-    table.content-1>tbody>tr:nth-child(1)>td:nth-child(2),
-    table.content-2>tbody>tr:nth-child(1)>td:nth-child(2) {
-      padding-left: 0.5cm;
-    }
+        .w-100 {
+            width: 100%;
+        }
 
-    h1 {
-      font-size: 24pt;
-    }
+        .line {
+            border-top: 1px solid gray;
+            margin: 0.2cm 0;
+        }
 
-    h2 {
-      font-size: 20pt;
-    }
+        table.content-1>tbody>tr:nth-child(1)>td:nth-child(2),
+        table.content-2>tbody>tr:nth-child(1)>td:nth-child(2) {
+            padding-left: 0.5cm;
+        }
 
-    h3 {
-      font-size: 12pt;
-    }
+        h1 {
+            font-size: 22pt;
+            margin: 0.3cm 0;
+        }
 
-    h4 {
-      font-size: 10pt;
-    }
+        h2 {
+            font-size: 16pt;
+            margin: 0.1cm 0;
+        }
 
-    h5 {
-      font-size: 8pt;
-    }
+        h3 {
+            font-size: 11pt;
+        }
 
-    p {
-      font-size: 11pt;
-    }
+        h4 {
+            font-size: 9pt;
+        }
 
-    table {
-      border-collapse: collapse;
-    }
+        h5 {
+            font-size: 8pt;
+        }
 
-    tr td {
-      page-break-inside: avoid;
-      white-space: nowrap;
-    }
+        table {
+            border-collapse: collapse;
+        }
 
-    .avoid-break {
-      page-break-after: avoid;
-    }
+        tr td {
+            page-break-inside: avoid;
+            white-space: nowrap;
+        }
+        .page:last-child { page-break-after: unset; }
 
-    @page {
-      size: 21cm 29.7cm;
-      margin: 0mm;
-    }
+        @page {
+            size: a4 portrait;
+            margin: 0;
+
+        }
   </style>
 </head>
 
-<body>
+<body style="margin-bottom: -20px;">
   <page size="A4">
     <table class="parent">
       <tr class="header">
@@ -189,7 +198,7 @@
         </td>
         <td>
           <p>No Telefon</p>
-          <p>s013-1234567</p>
+          <p>013-1234567</p>
         </td>
       </tr>
     </table>
@@ -211,7 +220,7 @@
               <td colspan="4">
                 <div class="item">
                   <p class="bullet">No. Kad Pengenalan</p>
-                  <span>88888888888</span>
+                  <small>88888888888</small>
                 </div>
               </td>
             </tr>
@@ -219,15 +228,21 @@
               <td colspan="4">
                 <div class="item">
                   <p class="bullet">No. Kad Pengenalan Lama</p>
-                  <span>-</span>
+                  <small>88888888888</small>
                 </div>
               </td>
             </tr>
             <tr>
-              <td colspan="4">
+              <td>
                 <div class="item">
                   <p class="bullet">Tarikh Lahir</p>
-                  <span>Hospital Kajang</span>
+                  <small>11/10/1988</small>
+                </div>
+              </td>
+              <td>
+                <div class="item">
+                  <p class="bullet">Tempat Lahir</p>
+                  <small>Hospital Kajang</small>
                 </div>
               </td>
             </tr>
@@ -235,19 +250,19 @@
               <td>
                 <div class="item">
                   <p class="bullet">Jantina</p>
-                  <span>Lelaki</span>
+                  <small>Lelaki</small>
                 </div>
               </td>
               <td>
                 <div class="item">
                   <p class="bullet">Bangsa</p>
-                  <span>Melayu</span>
+                  <small>Melayu</small>
                 </div>
               </td>
               <td>
                 <div class="item">
                   <p class="bullet">Agama</p>
-                  <span>Islam</span>
+                  <small>Islam</small>
                 </div>
               </td>
               </tr>
@@ -256,13 +271,13 @@
                 <td>
                   <div class="item">
                     <p class="bullet">Jenis Darah</p>
-                    <span>Lelaki</span>
+                    <small>AB+</small>
                   </div>
                 </td>
-                <td colspan="2">
+                <td>
                   <div class="item">
-                    <p class="bullet">No Telefon(Pejabat)</p>
-                    <span>Melayu</span>
+                    <p class="bullet">No Telefon (Pejabat)</p>
+                    <small>012932834375</small>
                   </div>
                 </td>
             </tr>
@@ -271,56 +286,53 @@
               <td>
                 <div class="item">
                   <p class="bullet">Telefon Bimbit</p>
-                  <span>Lelaki</span>
+                  <small>012932834375</small>
                 </div>
               </td>
 
-              <td colspan="2">
+              <td>
                 <div class="item">
                   <p class="bullet">No Faksimili</p>
-                  <span>Melayu</span>
+                  <small>012932834375</small>
                 </div>
               </td>
-
             </tr>
 
             <tr>
               <td colspan="3">
                 <div class="item">
                   <p class="bullet">Lesen Memandu</p>
-                  <span>Lelaki</span>
+                  <small>B, D</small>
                 </div>
               </td>
             </tr>
           </table>
           <table class="line w-100">
             <tr>
-              <td colspan="4">
+              <td>
                 <div class="item">
                   <p class="bullet">Alamat Tetap</p>
-                  <span>88888888888</span>
+                  <small>sfesfsefsfsef</small>
                 </div>
               </td>
-            </tr>
-            <tr>
-              <td  >
+              <td>
                 <div class="item">
                   <p class="bullet">Bandar</p>
-                  <span>-</span>
-                </div>
-              </td>
-              <td >
-                <div class="item">
-                  <p class="bullet">Poskod</p>
-                  <span>-</span>
+                  <small>Petaling Jaya</small>
                 </div>
               </td>
             </tr>
             <tr>
-              <td colspan="4">
+              <td>
+                <div class="item">
+                  <p class="bullet">Poskod</p>
+                  <small>432532</small>
+                </div>
+              </td>              
+              <td>
                 <div class="item">
                   <p class="bullet">Negeri</p>
-                  <span>Hospital Kajang</span>
+                  <small>Selangor</small>
                 </div>
               </td>
             </tr>
@@ -328,32 +340,30 @@
           </table>
           <table class="line w-100">
             <tr>
-              <td colspan="2">
+              <td>
                 <div class="item">
-                  <p class="bullet">Alamat Tetap</p>
-                  <span>88888888888</span>
+                  <p class="bullet">Alamat Surat Menyurat</p>
+                  <small>KNgskjdgsdkgsfs</small>
+                </div>
+              </td>
+              <td>
+                <div class="item">
+                  <p class="bullet">Bandar</p>
+                  <small>Kajang</small>
                 </div>
               </td>
             </tr>
             <tr>
-              <td>
-                <div class="item">
-                  <p class="bullet">Bandar</p>
-                  <span>-</span>
-                </div>
-              </td>
               <td>
                 <div class="item">
                   <p class="bullet">Poskod</p>
-                  <span>-</span>
+                  <small>234234</small>
                 </div>
               </td>
-            </tr>
-            <tr>
-              <td colspan="2">
+              <td>
                 <div class="item">
                   <p class="bullet">Negeri</p>
-                  <span>Hospital Kajang</span>
+                  <small>Selangor</small>
                 </div>
               </td>
             </tr>
@@ -365,85 +375,58 @@
             <tr>
               <td colspan="4">
                 <div class="item">
-                  <p class="bullet">No. Kad Pengenalan</p>
-                  <span>88888888888</span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                <div class="item">
-                  <p class="bullet">No. Kad Pengenalan Lama</p>
-                  <span>-</span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                <div class="item">
-                  <p class="bullet">Tarikh Lahir</p>
-                  <span>Hospital Kajang</span>
+                  <p class="bullet">Taraf Perkahwinan</p>
+                  <small>Berkahwin</small>
                 </div>
               </td>
             </tr>
             <tr>
               <td>
                 <div class="item">
-                  <p class="bullet">Jantina</p>
-                  <span>Lelaki</span>
+                  <p class="bullet">Nama Pasangan</p>
+                  <small>235453</small>
                 </div>
               </td>
               <td>
                 <div class="item">
-                  <p class="bullet">Bangsa</p>
-                  <span>Melayu</span>
-                </div>
-              </td>
-              <td>
-                <div class="item">
-                  <p class="bullet">Agama</p>
-                  <span>Islam</span>
+                  <p class="bullet">No. Kad Pengenalan Pasangan</p>
+                  <small>selangor</small>
                 </div>
               </td>
             </tr>
-
             <tr>
               <td>
                 <div class="item">
-                  <p class="bullet">Jenis Darah</p>
-                  <span>Lelaki</span>
+                  <p class="bullet">Tarikh Lahir Pasangan</p>
+                  <small>235453</small>
                 </div>
               </td>
-              <td colspan="2">
+              <td>
                 <div class="item">
-                  <p class="bullet">No Telefon(Pejabat)</p>
-                  <span>Melayu</span>
+                  <p class="bullet">Negeri Asal Pasangan</p>
+                  <small>selangor</small>
                 </div>
               </td>
             </tr>
-
             <tr>
               <td>
                 <div class="item">
-                  <p class="bullet">Telefon Bimbit</p>
-                  <span>Lelaki</span>
+                  <p class="bullet">Pekerjaan Pasangan</p>
+                  <small>sefsfes</small>
                 </div>
               </td>
-
-              <td colspan="2">
+              <td>
                 <div class="item">
-                  <p class="bullet">No Faksimili</p>
-                  <span>Melayu</span>
+                  <p class="bullet">Majikan Pasangan</p>
+                  <small>selangor</small>
                 </div>
               </td>
-
             </tr>
-
             <tr>
               <td colspan="3">
                 <div class="item">
-                  <p class="bullet">Lesen Memandu</p>
-                  <span>Lelaki</span>
+                  <p class="bullet">Alamat Majikan Pasangan</p>
+                  <small>sefsfasfdfgdgdgrdgdrg</small>
                 </div>
               </td>
             </tr>
@@ -452,41 +435,37 @@
             <tr>
               <td colspan="4">
                 <div class="item">
-                  <p class="bullet">Alamat Tetap</p>
-                  <span>88888888888</span>
+                  <p class="bullet">Nama</p>
+                  <small>sagsaeg</small>
                 </div>
               </td>
             </tr>
             <tr>
               <td>
                 <div class="item">
-                  <p class="bullet">Bandar</p>
-                  <span>-</span>
+                  <p class="bullet">Tarikh Lahir</p>
+                  <small>235243</small>
                 </div>
               </td>
               <td>
                 <div class="item">
-                  <p class="bullet">Poskod</p>
-                  <span>-</span>
+                  <p class="bullet">Status</p>
+                  <small>sefsef</small>
                 </div>
               </td>
             </tr>
             <tr>
               <td colspan="4">
                 <div class="item">
-                  <p class="bullet">Negeri</p>
-                  <span>Hospital Kajang</span>
+                  <p class="bullet">Keputusan Peperiksaan</p>
+                  <small>upsr 4a 1b</small>
                 </div>
               </td>
             </tr>
-
           </table>
         </td>
       </tr>
     </table>
-
-
-
   </page>
 </body>
 
