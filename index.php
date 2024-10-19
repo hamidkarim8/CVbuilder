@@ -7,9 +7,7 @@ use Dompdf\Options;
 
 //dummy data
 
-$default_photo = 'https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg';
-$photo_path = 'http://localhost:8089/PDFtemplate/default-avatar.jpg';
-$photo_src = !empty($photo_path) ? $photo_path : $default_photo;
+$photo_path = 'https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg';
 $greet = "Encik";
 $name = "Mohd Sufian Bin Mohd Tarmizi";
 $position = "Pegawai Teknologi Maklumat";
@@ -216,9 +214,21 @@ $html = '<!DOCTYPE html>
         padding-left: 0.5cm;
       }
 
+      .header-container {
+          display: inline-block;
+          text-align: center;
+      }
+
       h1 {
-        font-size: 22pt;
-        margin: 0.3cm 0;
+          font-size: 24pt;
+          margin: 0.3cm 0;
+      }
+
+      hr {
+          border: 3px solid #019fce;
+          border-radius: 5px;
+          width: 100%;
+          margin: 0;
       }
 
       h2 {
@@ -263,12 +273,15 @@ $html = '<!DOCTYPE html>
         <tr class="header">
           <td colspan="3">
             <h3 class="title">'. $greet .'</h3>
-            <h1>'. $name .'</h1>
+            <div class="header-container">
+                <h1>'. $name .'</h1>
+                <hr>
+            </div>
             <h4>'. $position .'</h4>
           </td>
           <td class="photo" rowspan="3">
             <img
-              src="'. $photo_src .'"
+              src="'. $photo_path .'"
               alt="Photo"
             />
           </td>
