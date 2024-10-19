@@ -130,7 +130,7 @@ $html = '<!DOCTYPE html>
     }
 
       .content-1 {
-        margin-top: 1cm;
+        margin-top: 0.5cm;
       }
 
       .avoid-break {
@@ -221,7 +221,7 @@ $html = '<!DOCTYPE html>
 
       h1 {
           font-size: 24pt;
-          margin: 0.3cm 0;
+          margin: 0.1cm 0;
       }
 
       hr {
@@ -409,20 +409,20 @@ $html = '<!DOCTYPE html>
             </table>
             <table class="line w-100">
               <tr>
-                <td style="max-width: 100px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                    <div class="item">
-                        <p class="bullet">Alamat Tetap</p>
-                        <small>'. $permanent_address .'</small>
-                    </div>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Tetap</p>
+                    <small>'. $permanent_address .'</small>
+                  </div>
                 </td>
+              </tr>
+              <tr>
                 <td>
                   <div class="item">
                     <p class="bullet">Bandar</p>
                     <small>'. $city .'</small>
                   </div>
                 </td>
-              </tr>
-              <tr>
                 <td>
                   <div class="item">
                     <p class="bullet">Poskod</p>
@@ -521,7 +521,7 @@ $html = '<!DOCTYPE html>
                 </td>
               </tr>
               <tr>
-                <td colspan="3">
+                <td colspan="4">
                   <div class="item">
                     <p class="bullet">Alamat Majikan Pasangan</p>
                     <small>'. $spouse_employer_address .'</small>
