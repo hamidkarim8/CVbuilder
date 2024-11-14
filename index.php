@@ -264,6 +264,21 @@ $html = '<!DOCTYPE html>
         size: a4 portrait;
         margin: 0;
       }
+
+      .fixed-right-table {
+        position: absolute;
+        width: 50%;
+        padding: 10px;
+      }
+
+      .fixed-right-table table {
+        width: 100%;
+      }
+
+      .fixed-right-table .item {
+        margin-bottom: 10px;
+      }
+
     </style>
   </head>
 
@@ -469,6 +484,8 @@ $html = '<!DOCTYPE html>
             </table>
           </td>
           <td style="vertical-align: top">
+          <div class="fixed-right-table">
+
             <table>
               <tr>
                 <td colspan="4">
@@ -566,6 +583,533 @@ $html = '<!DOCTYPE html>
                 </td>
               </tr>
             </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </page>
+
+    
+    <page size="A4">
+      <table class="parent">
+      </table>
+      <table class="content-1 avoid-break" style="margin-top: 25%;">
+        <tr>
+          <td>
+            <h2>Butiran Peribadi</h2>
+          </td>
+          <td>
+            <h2>Maklumat Keluarga</h2>
+          </td>
+        </tr>
+      </table>
+      <table class="content-2">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan</p>
+                    <small>'. $ic_number .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan Lama</p>
+                    <small>'. $old_ic_number .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir</p>
+                    <small>'. $birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tempat Lahir</p>
+                    <small>'. $birthplace .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Jantina</p>
+                    <small>'. $gender .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Bangsa</p>
+                    <small>'. $race .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Agama</p>
+                    <small>'. $religion .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Jenis Darah</p>
+                    <small>'. $blood_type .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">No Telefon (Pejabat)</p>
+                    <small>'. $office_phone .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Telefon Bimbit</p>
+                    <small>'. $mobile_phone .'</small>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="item">
+                    <p class="bullet">No Faksimili</p>
+                    <small>'. $fax_number .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3">
+                  <div class="item">
+                    <p class="bullet">Lesen Memandu</p>
+                    <small>'. $driving_license .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="line w-100">
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Tetap</p>
+                    <small>'. $permanent_address .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Bandar</p>
+                    <small>'. $city .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Poskod</p>
+                    <small>'. $postcode .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Negeri</p>
+                    <small>'. $state .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="line w-100">
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Surat Menyurat</p>
+                    <small>'. $mailing_address .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Bandar</p>
+                    <small>'. $mailing_city .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Poskod</p>
+                    <small>'. $mailing_postcode .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Negeri</p>
+                    <small>'. $mailing_state .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style="vertical-align: top">
+          
+          <div class="fixed-right-table">
+
+            <table>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Taraf Perkahwinan</p>
+                    <small>'. $marital_status .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Nama Pasangan</p>
+                    <small>'. $spouse_name .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan Pasangan</p>
+                    <small>'. $spouse_ic .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir Pasangan</p>
+                    <small>'. $spouse_birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Negeri Asal Pasangan</p>
+                    <small>'. $spouse_state .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Pekerjaan Pasangan</p>
+                    <small>'. $spouse_job .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Majikan Pasangan</p>
+                    <small>'. $spouse_employer .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Majikan Pasangan</p>
+                    <small>'. $spouse_employer_address .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="line w-100">
+              <tr>
+                <td colspan="4">
+                    <p>ANAK</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Nama</p>
+                    <small>'. $child_name .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir</p>
+                    <small>'. $child_birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Status</p>
+                    <small>'. $child_status .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Keputusan Peperiksaan</p>
+                    <small class="badge">'. $child_exam_result .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </page>
+
+
+    <page size="A4">
+      <table class="parent">
+      </table>
+      <table class="content-1 avoid-break" style="margin-top: 25%;">
+        <tr>
+          <td>
+            <h2>Butiran Peribadi</h2>
+          </td>
+          <td>
+            <h2>Maklumat Keluarga</h2>
+          </td>
+        </tr>
+      </table>
+      <table class="content-2">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan</p>
+                    <small>'. $ic_number .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan Lama</p>
+                    <small>'. $old_ic_number .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir</p>
+                    <small>'. $birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tempat Lahir</p>
+                    <small>'. $birthplace .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Jantina</p>
+                    <small>'. $gender .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Bangsa</p>
+                    <small>'. $race .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Agama</p>
+                    <small>'. $religion .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Jenis Darah</p>
+                    <small>'. $blood_type .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">No Telefon (Pejabat)</p>
+                    <small>'. $office_phone .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Telefon Bimbit</p>
+                    <small>'. $mobile_phone .'</small>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="item">
+                    <p class="bullet">No Faksimili</p>
+                    <small>'. $fax_number .'</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3">
+                  <div class="item">
+                    <p class="bullet">Lesen Memandu</p>
+                    <small>'. $driving_license .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="line w-100">
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Tetap</p>
+                    <small>'. $permanent_address .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Bandar</p>
+                    <small>'. $city .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Poskod</p>
+                    <small>'. $postcode .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Negeri</p>
+                    <small>'. $state .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style="vertical-align: top">
+          
+          <div class="fixed-right-table">
+
+            <table>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Taraf Perkahwinan</p>
+                    <small>'. $marital_status .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Nama Pasangan</p>
+                    <small>'. $spouse_name .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">No. Kad Pengenalan Pasangan</p>
+                    <small>'. $spouse_ic .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir Pasangan</p>
+                    <small>'. $spouse_birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Negeri Asal Pasangan</p>
+                    <small>'. $spouse_state .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Pekerjaan Pasangan</p>
+                    <small>'. $spouse_job .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Majikan Pasangan</p>
+                    <small>'. $spouse_employer .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Alamat Majikan Pasangan</p>
+                    <small>'. $spouse_employer_address .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="line w-100">
+              <tr>
+                <td colspan="4">
+                    <p>ANAK</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Nama</p>
+                    <small>'. $child_name .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Tarikh Lahir</p>
+                    <small>'. $child_birthdate .'</small>
+                  </div>
+                </td>
+                <td>
+                  <div class="item">
+                    <p class="bullet">Status</p>
+                    <small>'. $child_status .'</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="item">
+                    <p class="bullet">Keputusan Peperiksaan</p>
+                    <small class="badge">'. $child_exam_result .'</small>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            </div>
           </td>
         </tr>
       </table>
